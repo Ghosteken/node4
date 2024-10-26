@@ -52,7 +52,7 @@ app.get('/users/:id/:name',(req,res)=>{
     res.send({message:'usres rq'})
 });
 
-app.get('/testing/:id',middleware,(req,res)=>{
+app.get('/testing/:id',middleware,(req,res)=>{  
     console.log("main endpoint")
     res.send({message:'testing request'})
 })
