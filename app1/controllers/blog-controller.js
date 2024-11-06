@@ -32,7 +32,7 @@ export const AddBlogs = async(res,req,next)=>{
 export const UpdateBlog = async(res,req,next)=>{
     const blogID = req.params.id
     try{
-        const blog = await Blog.findByIdAndUpdate()
+        const blog = await Blog.findByIdAndUpdate();
     }catch(error){
         return console.log(error)
     } return res.status(200).json(blog,{message:'Blog updated'})
