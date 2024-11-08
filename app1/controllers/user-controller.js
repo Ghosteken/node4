@@ -25,7 +25,7 @@ export const signup = async (req,res,next) => {
     }
     const harshedPassword = bcrypt.hashSync(password) 
     const user = new User({
-        name,email,password:harshedPassword,
+        name,email,password:harshedPassword,blogs:[],
     });
     try {
         await user.save()
