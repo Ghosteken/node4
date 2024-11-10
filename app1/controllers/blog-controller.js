@@ -34,7 +34,7 @@ export const AddBlogs = async(res,req,next)=>{
         user,
     })
     try {
-        const session = mongoose.startSession();
+        const session = mongoose.startSession()
         (await session).startTransaction()
          await Blog.save({session})
          existingUser.blogs.push(blog)
