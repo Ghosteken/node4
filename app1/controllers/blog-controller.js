@@ -52,7 +52,7 @@ export const AddBlogs = async(res,req,next)=>{
 }
 
 export const UpdateBlog = async(res,req,next)=>{
-    const {title,description,image} = req.body
+    const {title,description,image} = req.body;
     const blogID = req.params.id
     let blog;
     try{
