@@ -1,3 +1,64 @@
+import mongoose from 'mongoose';
+import User from './app1/models/User';
+
+export const getUser = async(req, res ,next) => {
+    let user = req.query.user;
+    try{
+        user = await User.find()
+    }catch(err){
+        return console.log(err);
+    } if (!user){
+        return res.status(404).json({message:'User not found'});
+    }else if (user){
+        return res.status(200).json({message:'User successfully'});
+    }
+};
+
+export const addUser = async(req, res,next) => {
+    const {name, email, password} = req.body;
+    let existingUser;
+    try{
+        existingUser = await User.findById(user)
+    } catch(err){
+        return console.log(err);
+    }if(!existingUser) {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const express = require('express')
 
 // const app = express();

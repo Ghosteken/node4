@@ -9,7 +9,7 @@ export const getAllBlogs = async(res,req,next)=>{
     }catch(err){
         return console.log(err);
     }
-    if(!blogs){
+    if(!blogs){//nicholas5
         return res.status(404).json({message:'No blogs found'})
     }else{
         return res.status(200).json({blogs,message:'Blogs found'})
